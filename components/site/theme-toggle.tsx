@@ -7,17 +7,19 @@ import { Button } from "@/components/ui/button";
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
 
   return (
     <Button
       type="button"
       variant="outline"
       size="sm"
-      className="fixed bottom-6 left-6 z-40 hidden rounded-full md:flex"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      className="fixed bottom-4 left-4 z-40 h-11 w-11 rounded-full border-white/15 bg-[hsl(var(--card))]/90 p-0 shadow-xl backdrop-blur md:bottom-6 md:left-6 md:h-auto md:w-auto md:px-4"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {resolvedTheme === "dark" ? <Sun className="mr-2 h-4 w-4" /> : <Moon className="mr-2 h-4 w-4" />}
-      {resolvedTheme === "dark" ? "Light" : "Dark"}
+      {isDark ? <Sun className="h-4 w-4 md:mr-2" /> : <Moon className="h-4 w-4 md:mr-2" />}
+      <span className="hidden md:inline">{isDark ? "Light" : "Dark"}</span>
     </Button>
   );
 }
