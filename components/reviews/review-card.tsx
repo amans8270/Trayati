@@ -15,10 +15,10 @@ export function ReviewCard({ review }: { review: Review }) {
     .slice(0, 2);
 
   return (
-    <article className="glass-panel space-y-4 p-5 sm:p-6">
+    <article data-reveal className="glass-panel panel-3d mesh-highlight space-y-4 p-5 sm:p-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0 flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[hsl(var(--secondary))]/10 font-semibold text-[hsl(var(--secondary))]">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 bg-[linear-gradient(135deg,rgba(110,108,255,0.18),rgba(44,214,255,0.08))] font-semibold text-[hsl(var(--primary))] dark:border-white/10">
             {initials}
           </div>
           <div>
@@ -27,7 +27,7 @@ export function ReviewCard({ review }: { review: Review }) {
           </div>
         </div>
         {review.verified ? (
-          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">
+          <span className="inline-flex items-center gap-1 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-600 dark:text-emerald-300">
             <BadgeCheck className="h-4 w-4" />
             Verified Stay
           </span>
@@ -48,7 +48,7 @@ export function ReviewCard({ review }: { review: Review }) {
         </div>
       </div>
       <div>
-        <h3 className="font-serif text-xl sm:text-2xl">{review.title}</h3>
+        <h3 className="premium-heading font-serif text-2xl sm:text-3xl">{review.title}</h3>
         <p className="mt-2 line-clamp-3 text-sm leading-7 text-[hsl(var(--muted-foreground))]">{review.body}</p>
       </div>
       {review.photos?.[0] ? (

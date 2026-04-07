@@ -1,5 +1,6 @@
 import { compareSync } from "bcryptjs";
 import type { NextAuthOptions } from "next-auth";
+import { getServerSession } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 
@@ -77,3 +78,15 @@ export const authOptions: NextAuthOptions = {
     },
   },
 };
+
+export async function getOptionalServerSession() {
+  if (process.env.NODE_ENV === "production" && !process.env.NEXTAUTH_SECRET) {
+    return null;
+  }
+
+  try {
+    return await getServerSession(authOptions);
+  } catch {
+    return null;
+  }
+}

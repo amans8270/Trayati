@@ -1,9 +1,8 @@
-import { getServerSession } from "next-auth";
 import Link from "next/link";
 
 import { ReviewForm } from "@/components/reviews/review-form";
 import { Button } from "@/components/ui/button";
-import { authOptions } from "@/lib/auth";
+import { getOptionalServerSession } from "@/lib/auth";
 import { buildMetadata } from "@/lib/site";
 
 export const metadata = buildMetadata({
@@ -13,7 +12,7 @@ export const metadata = buildMetadata({
 });
 
 export default async function SubmitReviewPage() {
-  const session = await getServerSession(authOptions);
+  const session = await getOptionalServerSession();
 
   return (
     <div className="container-shell section-space">

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 
 import { Providers } from "@/components/providers";
+import { AmbientBackdrop } from "@/components/site/ambient-backdrop";
+import { MotionEnhancer } from "@/components/site/motion-enhancer";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { ThemeToggle } from "@/components/site/theme-toggle";
@@ -10,14 +12,15 @@ import { buildMetadata, siteConfig } from "@/lib/site";
 
 import "./globals.css";
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-serif",
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = buildMetadata({
@@ -32,11 +35,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfair.variable} overflow-x-hidden pb-20 font-sans sm:pb-0`}>
+      <body className={`${jakarta.variable} ${cormorant.variable} overflow-x-hidden pb-20 font-sans sm:pb-0`}>
         <Providers>
+          <MotionEnhancer />
           <div className="relative min-h-screen">
+            <AmbientBackdrop />
             <SiteHeader />
-            <main>{children}</main>
+            <main className="relative z-10">{children}</main>
             <SiteFooter />
             <ThemeToggle />
             <WhatsAppFloat />

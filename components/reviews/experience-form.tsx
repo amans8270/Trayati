@@ -32,20 +32,36 @@ export function ExperienceForm() {
   });
   const [body, setBody] = useState("<p></p>");
   const [rating, setRating] = useState(5);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   async function onSubmit(values: ExperienceFormValues) {
-    await fetch("/api/experiences", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...values,
-        body,
-        rating,
-        slug: slugify(values.title),
-        gallery: [values.coverMedia],
-      }),
-    });
-    router.push("/dashboard?tab=experiences&submitted=1");
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch("/api/experiences", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...values,
+          body,
+          rating,
+          slug: slugify(values.title),
+          gallery: [values.coverMedia],
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("We couldn't publish your story right now. Please try again.");
+      }
+
+      router.push("/dashboard?tab=experiences&submitted=1");
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "We couldn't publish your story right now. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -57,7 +73,7 @@ export function ExperienceForm() {
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm">
           Property tag
-          <select className="field-base h-12 rounded-2xl px-4" {...form.register("propertyId")}>
+          <select className="field-base h-12 rounded-[22px] px-4" {...form.register("propertyId")}>
             {properties.map((property) => (
               <option key={property.id} value={property.id}>
                 {property.name}
@@ -89,8 +105,9 @@ export function ExperienceForm() {
           ))}
         </div>
       </div>
-      <Button type="submit" size="lg">
-        Publish for moderation
+      {submitError ? <p className="rounded-[22px] border border-rose-400/20 bg-rose-400/10 px-4 py-3 text-sm text-rose-700 dark:text-rose-300">{submitError}</p> : null}
+      <Button type="submit" size="lg" disabled={isSubmitting}>
+        {isSubmitting ? "Publishing..." : "Publish for moderation"}
       </Button>
     </form>
   );

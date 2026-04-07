@@ -38,19 +38,35 @@ export function ReviewForm() {
     hospitalityRating: 5,
     valueRating: 5,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const body = form.watch("body");
 
   async function onSubmit(values: ReviewFormValues) {
-    await fetch("/api/reviews", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...values,
-        ...ratings,
-        photos: [],
-      }),
-    });
-    router.push("/dashboard?tab=reviews&submitted=1");
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch("/api/reviews", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...values,
+          ...ratings,
+          photos: [],
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("We couldn't submit your review right now. Please try again.");
+      }
+
+      router.push("/dashboard?tab=reviews&submitted=1");
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "We couldn't submit your review right now. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -58,7 +74,7 @@ export function ReviewForm() {
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm">
           Property stayed at
-          <select className="field-base h-12 rounded-2xl px-4" {...form.register("propertyId")}>
+          <select className="field-base h-12 rounded-[22px] px-4" {...form.register("propertyId")}>
             {properties.map((property) => (
               <option key={property.id} value={property.id}>
                 {property.name}
@@ -101,8 +117,10 @@ export function ReviewForm() {
         I confirm this review is based on my genuine experience.
       </label>
 
-      <Button type="submit" size="lg">
-        Submit for moderation
+      {submitError ? <p className="rounded-[22px] border border-rose-400/20 bg-rose-400/10 px-4 py-3 text-sm text-rose-700 dark:text-rose-300">{submitError}</p> : null}
+
+      <Button type="submit" size="lg" disabled={isSubmitting}>
+        {isSubmitting ? "Submitting..." : "Submit for moderation"}
       </Button>
     </form>
   );

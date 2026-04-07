@@ -25,19 +25,22 @@ export function HeroSearch() {
   }, [checkIn, checkOut, guests, location]);
 
   return (
-    <div className="glass-panel mt-8 grid gap-3 p-3 sm:mt-10 sm:gap-4 sm:p-4 lg:grid-cols-[1.3fr_1fr_1fr_0.8fr_auto]">
+    <div
+      data-reveal
+      className="glass-panel mesh-highlight mt-8 grid gap-3 p-3 sm:mt-10 sm:gap-4 sm:p-4 lg:grid-cols-[1.3fr_1fr_1fr_0.8fr_auto]"
+    >
       <Input value={location} onChange={(event) => setLocation(event.target.value)} placeholder="Location" />
       <DatePicker
         selected={checkIn}
         onChange={(date: Date | null) => setCheckIn(date)}
         placeholderText="Check-in"
-        className="field-base h-12 w-full rounded-2xl px-4 text-sm"
+        className="field-base h-12 w-full rounded-[22px] px-4 text-sm"
       />
       <DatePicker
         selected={checkOut}
         onChange={(date: Date | null) => setCheckOut(date)}
         placeholderText="Check-out"
-        className="field-base h-12 w-full rounded-2xl px-4 text-sm"
+        className="field-base h-12 w-full rounded-[22px] px-4 text-sm"
       />
       <Input value={guests} onChange={(event) => setGuests(event.target.value)} placeholder="Guests" />
       <Button asChild size="lg" className="w-full lg:w-auto">
