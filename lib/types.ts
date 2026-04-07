@@ -1,6 +1,6 @@
 export type Amenity =
   | "Air Conditioning"
-  | "Temple Shuttle"
+  | "Mountain View"
   | "Wi-Fi"
   | "Workstation"
   | "Kitchenette"

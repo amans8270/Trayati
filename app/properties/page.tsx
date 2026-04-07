@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/site/section-heading";
 
 export const metadata = buildMetadata({
   title: "Properties",
-  description: "Browse premium Trayati Stays homes and suites in Tirupati with filters for guests, dates, price, and amenities.",
+  description: "Browse premium Trayati Stays homes and suites in Bir, Himachal Pradesh with filters for guests, dates, price, and amenities.",
   path: "/properties",
 });
 

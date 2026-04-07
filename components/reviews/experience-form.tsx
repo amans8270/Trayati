@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { properties } from "@/lib/mock-data";
 import { slugify } from "@/lib/utils";
 
-const tags = ["Family Trip", "Solo Travel", "Couple Getaway", "Business Stay", "Pilgrimage"];
+const tags = ["Family Trip", "Solo Travel", "Couple Getaway", "Business Stay", "Adventure Escape"];
 
 type ExperienceFormValues = {
   title: string;

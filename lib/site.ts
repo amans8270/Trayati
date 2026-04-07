@@ -4,10 +4,10 @@ export const siteConfig = {
   name: "Trayati Stays",
   tagline: "Where Every Stay Feels Like Home",
   description:
-    "Premium homestays and short stays in Tirupati for pilgrims, families, and corporate guests. Warm hosting, trusted reviews, and seamless booking.",
+    "Premium homestays and short stays in Bir, Himachal Pradesh for mountain travellers, workations, families, and adventure seekers. Warm hosting, trusted reviews, and seamless booking.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "en_IN",
-  city: "Tirupati",
+  city: "Bir",
   phone: "+91 90100 12345",
   whatsapp: "919010012345",
   email: "hello@trayatistays.com",

@@ -1,4 +1,4 @@
-import { addDays, subDays } from "date-fns";
+﻿import { addDays, subDays } from "date-fns";
 
 import { type Booking, type Experience, type Property, type Review } from "@/lib/types";
 
@@ -7,15 +7,15 @@ const photo = (id: number) => `/photos/${id}.avif`;
 
 export const properties: Property[] = [
   {
-    id: "prop_tirupati",
-    slug: "trayati-stays-tirupati-retreat",
-    name: "Trayati Stays Tirupati Retreat",
-    city: "Tirupati",
-    location: "Near Alipiri, Tirupati, Andhra Pradesh",
+    id: "prop_bir_mudhouse",
+    slug: "mudhouse-bir-by-trayati-stays",
+    name: "Mudhouse Bir by Trayati Stays",
+    city: "Bir",
+    location: "Bir, Kangra District, Himachal Pradesh",
     description:
-      "A thoughtfully hosted premium homestay designed for pilgrimage stays, family trips, and short corporate visits. Expect warm service, earthy interiors, smooth check-ins, and quick access to Tirupati's spiritual and civic landmarks.",
+      "A thoughtfully hosted mountain homestay in Bir designed for slow mornings, paragliding weekends, family escapes, and longer workation stays. Expect earthy interiors, warm service, and quick access to cafes, landing sites, and the valley trails around Bir Billing.",
     shortDescription:
-      "Premium homestay with curated comfort, temple access support, and family-friendly spaces.",
+      "An earthy mudhouse stay with mountain air, cozy corners, and easy access to Bir's cafes and paragliding scene.",
     price: 4200,
     maxGuests: 5,
     beds: "2 bedrooms",
@@ -23,21 +23,21 @@ export const properties: Property[] = [
     type: "Entire stay",
     rating: 4.9,
     reviewsCount: 47,
-    images: [photo(1), photo(2), photo(3), photo(4), photo(5), photo(6), photo(7), photo(8), photo(9), photo(10), photo(11), photo(12)],
-    amenities: ["Air Conditioning", "Temple Shuttle", "Wi-Fi", "Workstation", "Breakfast", "Parking", "24/7 Support", "Smart TV"],
-    coordinates: { lat: 13.6288, lng: 79.4192 },
+    images: ["/location/bir-paragliding-2.jpg", "/location/bir-paragliding-1.jpg", photo(1), photo(2), photo(3), photo(4), photo(5), photo(6), photo(7), photo(8), photo(9), photo(10)],
+    amenities: ["Mountain View", "Wi-Fi", "Workstation", "Breakfast", "Parking", "24/7 Support", "Smart TV"],
+    coordinates: { lat: 32.0504, lng: 76.7164 },
     availability: [addDays(baseDate, 2), addDays(baseDate, 9), addDays(baseDate, 15)].map((date) => date.toISOString()),
   },
   {
     id: "prop_residences",
     slug: "trayati-green-court-residences",
     name: "Trayati Green Court Residences",
-    city: "Tirupati",
-    location: "Kapila Theertham Road, Tirupati, Andhra Pradesh",
+    city: "Bir",
+    location: "Upper Bir Road, Bir, Himachal Pradesh",
     description:
-      "A calm apartment-style stay for longer pilgrim visits and corporate stopovers. Includes flexible check-in, work-friendly corners, and concierge assistance for transport and darshan planning.",
+      "A calm apartment-style stay for longer mountain retreats and remote-work stopovers. Includes flexible check-in, work-friendly corners, and easy access to Bir's cafes, monasteries, and scenic walking routes.",
     shortDescription:
-      "Apartment-style living with premium service touches and seamless city access.",
+      "Apartment-style living with premium service touches and seamless access to Bir village life.",
     price: 5100,
     maxGuests: 6,
     beds: "3 bedrooms",
@@ -47,19 +47,19 @@ export const properties: Property[] = [
     reviewsCount: 31,
     images: [photo(13), photo(14), photo(15), photo(16), photo(17), photo(18), photo(19), photo(20), photo(21), photo(22), photo(23), photo(24)],
     amenities: ["Air Conditioning", "Wi-Fi", "Workstation", "Kitchenette", "Breakfast", "Parking", "24/7 Support", "Airport Pickup"],
-    coordinates: { lat: 13.6355, lng: 79.4224 },
+    coordinates: { lat: 32.0488, lng: 76.7185 },
     availability: [addDays(baseDate, 4), addDays(baseDate, 11), addDays(baseDate, 18)].map((date) => date.toISOString()),
   },
   {
     id: "prop_suites",
     slug: "trayati-sacred-view-suites",
     name: "Trayati Sacred View Suites",
-    city: "Tirupati",
-    location: "Renigunta Road, Tirupati, Andhra Pradesh",
+    city: "Bir",
+    location: "Landing Site Road, Bir Billing, Himachal Pradesh",
     description:
-      "Built for guests who want hotel-grade polish with homestay warmth. Spacious suites, family dining, premium linens, and fast support for airport or station transfers.",
+      "Built for guests who want boutique polish with homestay warmth. Spacious suites, family dining, premium linens, and fast support for taxis, landing-site pickups, and local Bir recommendations.",
     shortDescription:
-      "Polished premium suites with elevated service, transfer support, and serene interiors.",
+      "Polished premium suites with elevated service, valley energy, and serene interiors.",
     price: 6200,
     maxGuests: 4,
     beds: "2 suites",
@@ -69,7 +69,7 @@ export const properties: Property[] = [
     reviewsCount: 22,
     images: [photo(25), photo(26), photo(28), photo(29), photo(30), photo(31), photo(32), photo(33), photo(34), photo(35), photo(36)],
     amenities: ["Air Conditioning", "Wi-Fi", "Workstation", "Breakfast", "Parking", "24/7 Support", "Smart TV", "Airport Pickup"],
-    coordinates: { lat: 13.6172, lng: 79.4328 },
+    coordinates: { lat: 32.0575, lng: 76.7283 },
     availability: [addDays(baseDate, 1), addDays(baseDate, 7), addDays(baseDate, 12)].map((date) => date.toISOString()),
   },
 ];
@@ -77,16 +77,16 @@ export const properties: Property[] = [
 export const reviews: Review[] = [
   {
     id: "rev_1",
-    propertyId: "prop_tirupati",
-    propertyName: "Trayati Stays Tirupati Retreat",
-    propertySlug: "trayati-stays-tirupati-retreat",
+    propertyId: "prop_bir_mudhouse",
+    propertyName: "Mudhouse Bir by Trayati Stays",
+    propertySlug: "mudhouse-bir-by-trayati-stays",
     author: "Priya S.",
     stayDate: "2026-03-10",
     createdAt: "2026-03-16",
     verified: true,
-    title: "Comforting stay before darshan",
+    title: "A grounding mountain stay",
     body:
-      "The team handled our late-night arrival beautifully and even helped us coordinate temple transport for the next morning. The rooms felt calm, spotless, and thoughtfully prepared for a family group.",
+      "The team handled our late arrival beautifully and helped us settle in without any rush. The mudhouse aesthetic, valley air, and warm hospitality made the whole stay feel calm and memorable.",
     overallRating: 5,
     cleanlinessRating: 5,
     locationRating: 5,
@@ -98,16 +98,16 @@ export const reviews: Review[] = [
   },
   {
     id: "rev_2",
-    propertyId: "prop_tirupati",
-    propertyName: "Trayati Stays Tirupati Retreat",
-    propertySlug: "trayati-stays-tirupati-retreat",
+    propertyId: "prop_bir_mudhouse",
+    propertyName: "Mudhouse Bir by Trayati Stays",
+    propertySlug: "mudhouse-bir-by-trayati-stays",
     author: "Rahul K.",
     stayDate: "2026-02-19",
     createdAt: "2026-02-24",
     verified: true,
     title: "Ideal for a short corporate stop",
     body:
-      "Fast Wi-Fi, a proper workstation, and an easy check-in made this a very smooth business trip. It still felt warm and personal rather than transactional, which I really appreciated.",
+      "Fast Wi-Fi, a proper workstation, and an easy check-in made this a very smooth workation stop. It still felt warm and personal rather than transactional, which I really appreciated.",
     overallRating: 5,
     cleanlinessRating: 5,
     locationRating: 4,
@@ -180,16 +180,16 @@ export const reviews: Review[] = [
   },
   {
     id: "rev_6",
-    propertyId: "prop_tirupati",
-    propertyName: "Trayati Stays Tirupati Retreat",
-    propertySlug: "trayati-stays-tirupati-retreat",
+    propertyId: "prop_bir_mudhouse",
+    propertyName: "Mudhouse Bir by Trayati Stays",
+    propertySlug: "mudhouse-bir-by-trayati-stays",
     author: "Vinod M.",
     stayDate: "2026-03-28",
     createdAt: "2026-04-01",
     verified: true,
     title: "Good location and support",
     body:
-      "We needed a dependable stopover before an early temple visit, and this worked wonderfully. Staff were prompt and the home had a very balanced premium-yet-welcoming feel.",
+      "We needed a dependable mountain base for an early tandem paragliding session, and this worked wonderfully. Staff were prompt and the home had a balanced premium-yet-welcoming feel.",
     overallRating: 5,
     cleanlinessRating: 5,
     locationRating: 5,
@@ -214,35 +214,35 @@ export const experiences: Experience[] = [
     excerpt:
       "We wanted comfort, closeness, and calm after a busy month, and Trayati delivered all three with beautifully quiet evenings.",
     body:
-      "<p>We arrived tired and left genuinely restored. The home had enough room for everyone to spread out, yet the shared spaces pulled us back together for tea, breakfast, and long evening conversations.</p><p>The staff made the stay feel very personal. They checked in just enough, handled transport advice smoothly, and helped us plan our darshan timings around family needs.</p><p>What stayed with me most was the mood of the place: earthy, clean, and deeply calm.</p>",
+      "<p>We arrived tired and left genuinely restored. The home had enough room for everyone to spread out, yet the shared spaces pulled us back together for tea, breakfast, and long evening conversations.</p><p>The staff made the stay feel very personal. They checked in just enough, handled local recommendations smoothly, and helped us plan our days between Bir cafes, monastery visits, and quiet walks.</p><p>What stayed with me most was the mood of the place: earthy, clean, and deeply calm.</p>",
     coverMedia: photo(21),
     gallery: [photo(21), photo(22), photo(24)],
     rating: 5,
     likes: 29,
     commentsCount: 5,
-    tags: ["Family Trip", "Pilgrimage"],
+    tags: ["Family Trip", "Adventure Escape"],
     status: "PUBLISHED",
   },
   {
     id: "exp_2",
-    slug: "early-morning-darshan-made-easy",
-    propertyId: "prop_tirupati",
-    propertyName: "Trayati Stays Tirupati Retreat",
-    propertySlug: "trayati-stays-tirupati-retreat",
+    slug: "sunrise-over-bir-billing",
+    propertyId: "prop_bir_mudhouse",
+    propertyName: "Mudhouse Bir by Trayati Stays",
+    propertySlug: "mudhouse-bir-by-trayati-stays",
     author: "Kiran V.",
     stayDate: "2026-02-08",
     createdAt: "2026-02-15",
-    title: "Early morning darshan made easy",
+    title: "Sunrise over Bir Billing made easy",
     excerpt:
-      "The stay worked like a calm base camp for our pilgrimage, especially with the team helping us plan around an early start.",
+      "The stay worked like a calm base camp for our Bir trip, especially with the team helping us plan around an early sunrise and flight slot.",
     body:
-      "<p>For a pilgrimage trip, small things matter: a quick dinner, a smooth wake-up, clear transport coordination, and a room that lets you rest properly before a packed morning.</p><p>Trayati managed every one of those touchpoints elegantly. It never felt overbearing, just dependable.</p><p>We also loved that the design still felt premium and intentional.</p>",
+      "<p>For a Bir trip, small things matter: a warm dinner, a smooth wake-up, clear taxi coordination, and a room that lets you rest properly before a packed morning outdoors.</p><p>Trayati managed every one of those touchpoints elegantly. It never felt overbearing, just dependable.</p><p>We also loved that the design still felt premium and intentional.</p>",
     coverMedia: photo(5),
     gallery: [photo(4), photo(5), photo(6)],
     rating: 5,
     likes: 18,
     commentsCount: 3,
-    tags: ["Pilgrimage", "Family Trip"],
+    tags: ["Adventure Escape", "Family Trip"],
     status: "PUBLISHED",
   },
   {
@@ -281,7 +281,7 @@ export const comments = [
     id: "com_2",
     experienceId: "exp_2",
     author: "Deepa S.",
-    body: "Helpful to know they assist with transport timing too.",
+    body: "Helpful to know they assist with flight timing and local transport too.",
     createdAt: subDays(baseDate, 21).toISOString(),
   },
 ];
@@ -289,8 +289,8 @@ export const comments = [
 export const bookings: Booking[] = [
   {
     id: "book_1",
-    propertyId: "prop_tirupati",
-    propertyName: "Trayati Stays Tirupati Retreat",
+    propertyId: "prop_bir_mudhouse",
+    propertyName: "Mudhouse Bir by Trayati Stays",
     checkIn: addDays(baseDate, 5).toISOString(),
     checkOut: addDays(baseDate, 7).toISOString(),
     guests: 3,
@@ -321,14 +321,14 @@ export const bookings: Booking[] = [
 
 export const blogPosts = [
   {
-    slug: "how-to-plan-a-peaceful-tirupati-stay",
-    title: "How to Plan a Peaceful Tirupati Stay",
-    excerpt: "Smart timing, transport planning, and where premium homestays fit into a smoother pilgrimage.",
+    slug: "how-to-plan-a-peaceful-bir-stay",
+    title: "How to Plan a Peaceful Bir Stay",
+    excerpt: "When to go, where to linger, and how a premium mountain homestay makes Bir more restorative.",
   },
   {
-    slug: "family-friendly-short-stays-in-tirupati",
-    title: "Family-Friendly Short Stays in Tirupati",
-    excerpt: "What families should look for when comfort, convenience, and rest all matter equally.",
+    slug: "family-friendly-short-stays-in-bir",
+    title: "Family-Friendly Short Stays in Bir",
+    excerpt: "What families should look for when comfort, convenience, views, and quiet all matter equally.",
   },
   {
     slug: "business-travel-with-homestay-comfort",
@@ -347,3 +347,4 @@ export const aggregateStats = {
 export const guestHighlights = [...reviews]
   .sort((a, b) => +new Date(b.createdAt) - +new Date(a.createdAt))
   .slice(0, 3);
+

@@ -33,8 +33,14 @@ export function ExperienceCard({ experience }: { experience: Experience }) {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <StarRating value={experience.rating} />
           <div className="flex items-center gap-4 text-sm text-[hsl(var(--muted-foreground))]">
-            <span className="inline-flex items-center gap-1"><Heart className="h-4 w-4" />{experience.likes}</span>
-            <span className="inline-flex items-center gap-1"><MessageCircle className="h-4 w-4" />{experience.commentsCount}</span>
+            <span className="inline-flex items-center gap-1">
+              <Heart className="h-4 w-4" />
+              {experience.likes}
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <MessageCircle className="h-4 w-4" />
+              {experience.commentsCount}
+            </span>
           </div>
         </div>
       </div>

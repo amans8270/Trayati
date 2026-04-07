@@ -5,7 +5,7 @@ import { JsonLd } from "@/lib/seo";
 import { buildMetadata } from "@/lib/site";
 
 const faqs = [
-  ["Do you host pilgrimage travellers?", "Yes. Our stays are especially suited for temple visits, family groups, and early-morning darshan planning."],
+  ["Do you host mountain travellers and paragliders?", "Yes. Our stays are well suited for Bir Billing trips, family mountain breaks, café-hopping weekends, and relaxed workations."],
   ["Can I pay online?", "Yes. The booking flow is prepared for Razorpay with Stripe fallback for international payments."],
   ["Are reviews verified?", "Verified stay badges can be attached to reviews linked to completed bookings."],
 ];

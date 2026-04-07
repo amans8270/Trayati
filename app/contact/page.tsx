@@ -11,7 +11,7 @@ export default function ContactPage() {
     <div className="container-shell section-space grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
       <div className="glass-panel p-8">
         <h1 className="font-serif text-5xl">Contact us</h1>
-        <p className="mt-4 text-base leading-8 text-[hsl(var(--muted-foreground))]">For bookings, longer stays, pilgrimage coordination, and corporate requirements.</p>
+        <p className="mt-4 text-base leading-8 text-[hsl(var(--muted-foreground))]">For bookings, longer stays, Bir travel planning, and workation requirements.</p>
         <div className="mt-8 space-y-3 text-sm">
           <p>{siteConfig.phone}</p>
           <p>{siteConfig.email}</p>
@@ -28,7 +28,7 @@ export default function ContactPage() {
           <button className="h-12 rounded-full bg-[hsl(var(--primary))] px-6 text-sm font-semibold text-[hsl(var(--primary-foreground))]">Send message</button>
         </form>
         <div className="surface-muted mt-6 rounded-[28px] p-5 text-sm text-[hsl(var(--muted-foreground))] dark:text-on-dark-soft">
-          Map embed placeholder for Tirupati location and arrival instructions.
+          Map embed placeholder for Bir, Himachal Pradesh and arrival instructions.
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ export default function AboutPage() {
         <h1 className="mt-3 font-serif text-5xl">Premium hosting shaped around warmth, trust, and local care.</h1>
         <div className="prose-trayati mt-8">
           <p>Trayati Stays was imagined as a bridge between premium hospitality and the emotional comfort of staying in a cared-for home.</p>
-          <p>We serve domestic travellers, pilgrims, families, and corporate guests who want dependable support without losing the softness and ease that make a stay memorable.</p>
+          <p>We serve domestic travellers, mountain seekers, families, and workation guests who want dependable support without losing the softness and ease that make a stay memorable.</p>
           <p>Our host profile, community promise, and on-ground service rituals can expand here with founder photos, behind-the-brand storytelling, and press coverage.</p>
         </div>
       </div>

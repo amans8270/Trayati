@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 export function HeroSearch() {
   const [checkIn, setCheckIn] = useState<Date | null>(null);
   const [checkOut, setCheckOut] = useState<Date | null>(null);
-  const [location, setLocation] = useState("Tirupati");
+  const [location, setLocation] = useState("Bir, Himachal Pradesh");
   const [guests, setGuests] = useState("2");
 
   const href = useMemo(() => {

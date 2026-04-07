@@ -3,7 +3,7 @@ import { buildMetadata } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Blog",
-  description: "Travel guides and local SEO content for Tirupati stays, pilgrimage planning, and premium short-stay travel.",
+  description: "Travel guides and local SEO content for Bir stays, Bir Billing weekends, workations, and premium short-stay travel.",
   path: "/blog",
 });
 

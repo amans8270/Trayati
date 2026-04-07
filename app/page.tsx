@@ -16,15 +16,15 @@ import { buildMetadata } from "@/lib/site";
 export const metadata = buildMetadata({
   title: "Home",
   description:
-    "Discover premium short stays in Tirupati with soulful interiors, trusted guest reviews, and seamless booking with Trayati Stays.",
+    "Discover premium short stays in Bir, Himachal Pradesh with soulful interiors, mountain views, trusted guest reviews, and seamless booking with Trayati Stays.",
   path: "/",
 });
 
 const usps = [
-  { title: "Hosted with heart", icon: Home, copy: "Warm, hands-on hosting for pilgrims, families, and corporate travellers." },
+  { title: "Hosted with heart", icon: Home, copy: "Warm, hands-on hosting for mountain travellers, families, and remote workers." },
   { title: "Verified trust", icon: ShieldCheck, copy: "Real reviews, confirmed stays, and dependable service standards." },
   { title: "Premium calm", icon: Trees, copy: "Earthy interiors, thoughtful amenities, and spaces that truly let you exhale." },
-  { title: "Effortless journeys", icon: Sparkles, copy: "Quick booking, responsive support, and local assistance when timing matters." },
+  { title: "Effortless journeys", icon: Sparkles, copy: "Quick booking, responsive support, and local Bir tips when timing matters." },
 ];
 
 export default function HomePage() {
@@ -45,18 +45,18 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div className="container-shell grid min-h-[auto] items-center gap-8 py-10 sm:py-14 lg:min-h-[88vh] lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:py-16">
           <div className="relative z-10">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[hsl(var(--primary))]">Premium Homestays in Tirupati</p>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[hsl(var(--primary))]">Premium Homestays in Bir, Himachal Pradesh</p>
             <h1 className="max-w-4xl font-serif text-4xl leading-[1.05] sm:text-6xl lg:text-7xl">
               Stay close to what matters, in spaces that feel deeply considered.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-[hsl(var(--muted-foreground))] sm:text-lg sm:leading-8">
-              Trayati Stays brings together premium comfort, temple-friendly convenience, and genuinely personal hosting for families, pilgrims, and professionals.
+              Trayati Stays brings together premium comfort, mountain-town ease, and genuinely personal hosting for families, slow travellers, and professionals escaping to Bir.
             </p>
             <HeroSearch />
             <div className="mt-6 flex flex-wrap gap-6 text-sm text-[hsl(var(--muted-foreground))]">
               <span>Airbnb-hosted stays</span>
               <span>Google Reviews ready</span>
-              <span>Flexible corporate booking</span>
+              <span>Workation-friendly stays</span>
             </div>
           </div>
 
@@ -86,7 +86,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Why Trayati Stays"
             title="Premium hospitality that feels reassuring from the first click to checkout."
-            description="Built for the realities of Indian short stays: family comfort, pilgrimage timing, business dependability, and hosts who stay present."
+            description="Built for the realities of premium mountain stays: family comfort, adventure access, workation dependability, and hosts who stay present."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {usps.map((usp) => (
@@ -177,7 +177,7 @@ export default function HomePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[hsl(var(--primary))]">Newsletter</p>
               <h2 className="mt-3 font-serif text-3xl sm:text-4xl">Get local stay tips and a welcome booking perk.</h2>
               <p className="mt-4 max-w-xl text-base leading-7 text-[hsl(var(--muted-foreground))]">
-                Join the Trayati list for pilgrimage planning tips, family travel guides, and a launch discount for your next short stay.
+                Join the Trayati list for Bir travel tips, mountain stay guides, and a launch discount for your next getaway.
               </p>
             </div>
             <form className="grid gap-3 self-end">
