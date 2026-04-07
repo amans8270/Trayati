@@ -26,7 +26,7 @@ export function RichTextEditor({
     editorProps: {
       attributes: {
         class:
-          "min-h-[240px] rounded-[28px] border border-[hsl(var(--border))] bg-white/80 px-4 py-3 outline-none prose prose-stone max-w-none",
+          "field-base min-h-[240px] rounded-[28px] px-4 py-3 outline-none prose prose-stone dark:prose-invert max-w-none",
       },
     },
     onUpdate: ({ editor }) => onChange(editor.getHTML()),

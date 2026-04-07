@@ -37,7 +37,7 @@ export default function PropertiesPage({
           <form className="grid gap-4">
             <label className="grid gap-2 text-sm">
               Stay type
-              <select name="type" defaultValue={searchParams?.type} className="h-12 rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4">
+              <select name="type" defaultValue={searchParams?.type} className="field-base h-12 rounded-2xl px-4">
                 <option value="">All</option>
                 {Array.from(new Set(properties.map((property) => property.type))).map((type) => (
                   <option key={type} value={type}>
@@ -48,11 +48,11 @@ export default function PropertiesPage({
             </label>
             <label className="grid gap-2 text-sm">
               Guests
-              <input name="guests" defaultValue={searchParams?.guests} className="h-12 rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4" />
+              <input name="guests" defaultValue={searchParams?.guests} className="field-base h-12 rounded-2xl px-4" />
             </label>
             <label className="grid gap-2 text-sm">
               Amenity
-              <select name="amenity" defaultValue={searchParams?.amenity} className="h-12 rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4">
+              <select name="amenity" defaultValue={searchParams?.amenity} className="field-base h-12 rounded-2xl px-4">
                 <option value="">All</option>
                 {Array.from(new Set(properties.flatMap((property) => property.amenities))).map((amenity) => (
                   <option key={amenity} value={amenity}>

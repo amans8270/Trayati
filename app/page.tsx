@@ -119,7 +119,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-space bg-white/40">
+      <section className="section-space bg-white/40 dark:bg-white/[0.02]">
         <div className="container-shell">
           <SectionHeading eyebrow="Guest Highlights" title="The latest guest voices, straight from recent stays." />
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -181,7 +181,7 @@ export default function HomePage() {
               </p>
             </div>
             <form className="grid gap-3 self-end">
-              <input className="h-12 rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4 text-sm" placeholder="Your email address" />
+              <input className="field-base h-12 rounded-2xl px-4 text-sm" placeholder="Your email address" />
               <Button size="lg">Claim 10% welcome offer</Button>
             </form>
           </div>

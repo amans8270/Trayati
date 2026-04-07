@@ -22,12 +22,12 @@ export default function ContactPage() {
       </div>
       <div className="glass-panel p-8">
         <form className="grid gap-4">
-          <input className="h-12 rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4" placeholder="Name" />
-          <input className="h-12 rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4" placeholder="Email" />
-          <textarea className="min-h-[180px] rounded-3xl border border-[hsl(var(--border))] bg-white/75 px-4 py-3" placeholder="How can we help?" />
+          <input className="field-base h-12 rounded-2xl px-4" placeholder="Name" />
+          <input className="field-base h-12 rounded-2xl px-4" placeholder="Email" />
+          <textarea className="field-base min-h-[180px] rounded-3xl px-4 py-3" placeholder="How can we help?" />
           <button className="h-12 rounded-full bg-[hsl(var(--primary))] px-6 text-sm font-semibold text-[hsl(var(--primary-foreground))]">Send message</button>
         </form>
-        <div className="mt-6 rounded-[28px] bg-stone-100 p-5 text-sm text-[hsl(var(--muted-foreground))]">
+        <div className="surface-muted mt-6 rounded-[28px] p-5 text-sm text-[hsl(var(--muted-foreground))] dark:text-on-dark-soft">
           Map embed placeholder for Tirupati location and arrival instructions.
         </div>
       </div>

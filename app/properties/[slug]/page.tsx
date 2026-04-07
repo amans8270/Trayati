@@ -103,7 +103,7 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
               <p className="mt-4 text-base leading-8 text-[hsl(var(--muted-foreground))]">{property.description}</p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {property.amenities.map((amenity) => (
-                  <div key={amenity} className="rounded-2xl bg-stone-100 px-4 py-3 text-sm">
+                  <div key={amenity} className="surface-muted rounded-2xl px-4 py-3 text-sm dark:text-on-dark-soft">
                     {amenity}
                   </div>
                 ))}
@@ -121,7 +121,7 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
                 </Button>
               </div>
               <div className="mt-8 grid gap-8 lg:grid-cols-[280px_1fr]">
-                <div className="rounded-[28px] bg-stone-100 p-5">
+                <div className="surface-muted rounded-[28px] p-5">
                   <p className="font-serif text-5xl">{averageRating}</p>
                   <p className="mt-2 text-sm text-[hsl(var(--muted-foreground))]">Overall experience</p>
                   <div className="mt-6">

@@ -12,7 +12,7 @@ export function PropertyCard({ property }: { property: Property }) {
         <Image src={property.images[0]} alt={property.name} fill className="object-cover" />
         <div className="absolute inset-x-4 top-4 flex items-center justify-between">
           <span className="rounded-full bg-black/60 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white">{property.type}</span>
-          <span className="rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-[hsl(var(--foreground))]">
+          <span className="rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-[hsl(var(--foreground))] dark:bg-black/50 dark:text-[hsl(var(--foreground))]">
             <Star className="mr-1 inline h-4 w-4 fill-current text-amber-500" />
             {property.rating}
           </span>

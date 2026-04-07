@@ -50,17 +50,17 @@ export function BookingWidget({ property }: { property: Property }) {
           selected={checkIn}
           onChange={(date: Date | null) => setCheckIn(date)}
           placeholderText="Check-in"
-          className="h-12 w-full rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4 text-sm"
+          className="field-base h-12 w-full rounded-2xl px-4 text-sm"
         />
         <DatePicker
           selected={checkOut}
           onChange={(date: Date | null) => setCheckOut(date)}
           placeholderText="Check-out"
-          className="h-12 w-full rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4 text-sm"
+          className="field-base h-12 w-full rounded-2xl px-4 text-sm"
         />
         <Input value={guests} onChange={(event) => setGuests(event.target.value)} placeholder="Guests" />
       </div>
-      <div className="rounded-3xl bg-stone-100 p-4 text-sm text-[hsl(var(--muted-foreground))]">
+      <div className="surface-muted rounded-3xl p-4 text-sm text-[hsl(var(--muted-foreground))] dark:text-on-dark-soft">
         <p className="inline-flex items-center gap-2 font-medium text-[hsl(var(--foreground))]">
           <CalendarDays className="h-4 w-4" />
           Step 1 to 4 booking flow

@@ -27,9 +27,9 @@ export function Button({
             variant === "primary",
           "bg-[hsl(var(--secondary))] text-[hsl(var(--secondary-foreground))] hover:bg-[hsl(var(--secondary))]/90":
             variant === "secondary",
-          "border border-[hsl(var(--border))] bg-white/60 text-[hsl(var(--foreground))] hover:bg-white":
+          "border border-[hsl(var(--border))] bg-white/60 text-[hsl(var(--foreground))] hover:bg-white dark:bg-white/5 dark:hover:bg-white/10":
             variant === "outline",
-          "text-[hsl(var(--foreground))] hover:bg-white/50": variant === "ghost",
+          "text-[hsl(var(--foreground))] hover:bg-white/50 dark:hover:bg-white/10": variant === "ghost",
           "h-10 px-4 text-sm": size === "sm",
           "h-12 px-6 text-sm": size === "md",
           "h-14 px-7 text-base": size === "lg",

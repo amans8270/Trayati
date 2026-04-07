@@ -23,21 +23,21 @@
 }
 
 .dark {
-  --background: 154 20% 8%;
-  --foreground: 38 42% 94%;
-  --muted: 156 14% 14%;
-  --muted-foreground: 35 19% 74%;
-  --card: 154 20% 10%;
-  --card-foreground: 38 42% 94%;
-  --border: 155 15% 22%;
-  --input: 155 15% 20%;
-  --primary: 18 67% 53%;
+  --background: 152 18% 7%;
+  --foreground: 40 40% 94%;
+  --muted: 150 14% 13%;
+  --muted-foreground: 34 21% 72%;
+  --card: 150 16% 9%;
+  --card-foreground: 40 40% 94%;
+  --border: 32 18% 22%;
+  --input: 150 14% 16%;
+  --primary: 19 68% 56%;
   --primary-foreground: 34 100% 97%;
-  --secondary: 145 21% 21%;
+  --secondary: 143 23% 18%;
   --secondary-foreground: 39 60% 96%;
-  --accent: 44 67% 61%;
+  --accent: 42 72% 63%;
   --accent-foreground: 154 20% 10%;
-  --ring: 18 67% 53%;
+  --ring: 19 68% 56%;
 }
 
 html {
@@ -49,6 +49,13 @@ body {
   background-image:
     radial-gradient(circle at top, rgba(171, 93, 61, 0.14), transparent 36%),
     linear-gradient(180deg, rgba(255, 250, 244, 0.95), rgba(250, 243, 234, 0.98));
+}
+
+.dark body {
+  background-image:
+    radial-gradient(circle at top, rgba(189, 110, 72, 0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(74, 111, 88, 0.15), transparent 28%),
+    linear-gradient(180deg, rgba(10, 18, 15, 0.98), rgba(14, 24, 20, 1));
 }
 
 body::before {
@@ -80,11 +87,43 @@ a {
 }
 
 .dark .glass-panel {
-  @apply border-white/10 bg-white/5;
+  background: linear-gradient(180deg, rgba(23, 35, 30, 0.82), rgba(15, 24, 20, 0.88));
+  border-color: rgba(208, 183, 151, 0.14);
+  box-shadow: 0 24px 80px -32px rgba(0, 0, 0, 0.62);
 }
 
 .text-balance {
   text-wrap: balance;
+}
+
+.surface-muted {
+  @apply rounded-[24px] bg-stone-100;
+}
+
+.dark .surface-muted {
+  background: rgba(236, 218, 198, 0.06);
+  border-color: rgba(208, 183, 151, 0.1);
+}
+
+.field-base {
+  @apply border border-[hsl(var(--border))] bg-white/75 text-[hsl(var(--foreground))];
+}
+
+.dark .field-base {
+  background: rgba(236, 218, 198, 0.06);
+}
+
+.pill-soft {
+  @apply rounded-full bg-stone-100 text-[hsl(var(--muted-foreground))];
+}
+
+.dark .pill-soft {
+  background: rgba(236, 218, 198, 0.08);
+  color: hsl(var(--foreground));
+}
+
+.dark .text-on-dark-soft {
+  color: rgba(255, 244, 230, 0.82);
 }
 
 .prose-trayati h1,
@@ -110,4 +149,21 @@ a {
 .react-datepicker__day--selected,
 .react-datepicker__day--keyboard-selected {
   @apply bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))];
+}
+
+.dark .react-datepicker__header,
+.dark .react-datepicker,
+.dark .react-datepicker__month-container {
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+}
+
+.dark .react-datepicker__day,
+.dark .react-datepicker__current-month,
+.dark .react-datepicker__day-name {
+  color: hsl(var(--foreground));
+}
+
+.dark .react-datepicker__day:hover {
+  background: rgba(236, 218, 198, 0.08);
 }

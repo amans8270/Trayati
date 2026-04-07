@@ -21,10 +21,10 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/30 bg-[hsl(var(--background))]/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-white/30 bg-[hsl(var(--background))]/85 backdrop-blur-xl dark:border-white/5 dark:bg-[hsl(var(--background))]/80">
       <div className="container-shell flex h-20 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-3">
-          <div className="relative h-12 w-12 overflow-hidden rounded-2xl border border-white/40 bg-black">
+          <div className="relative h-12 w-12 overflow-hidden rounded-2xl border border-white/40 bg-black dark:border-white/10">
             <Image src="/brand/logo-trayati.jpg" alt="Trayati Stays" fill className="object-cover" />
           </div>
           <div>
@@ -39,8 +39,8 @@ export function SiteHeader() {
               key={item.href}
               href={item.href}
               className={cn(
-                "rounded-full px-4 py-2 text-sm text-[hsl(var(--muted-foreground))] transition hover:bg-white/60 hover:text-[hsl(var(--foreground))]",
-                pathname === item.href && "bg-white text-[hsl(var(--foreground))] shadow-sm",
+                "rounded-full px-4 py-2 text-sm text-[hsl(var(--muted-foreground))] transition hover:bg-white/60 hover:text-[hsl(var(--foreground))] dark:hover:bg-white/8",
+                pathname === item.href && "bg-white text-[hsl(var(--foreground))] shadow-sm dark:bg-white/8",
               )}
             >
               {item.label}

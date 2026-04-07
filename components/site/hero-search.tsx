@@ -31,13 +31,13 @@ export function HeroSearch() {
         selected={checkIn}
         onChange={(date: Date | null) => setCheckIn(date)}
         placeholderText="Check-in"
-        className="h-12 w-full rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4 text-sm"
+        className="field-base h-12 w-full rounded-2xl px-4 text-sm"
       />
       <DatePicker
         selected={checkOut}
         onChange={(date: Date | null) => setCheckOut(date)}
         placeholderText="Check-out"
-        className="h-12 w-full rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4 text-sm"
+        className="field-base h-12 w-full rounded-2xl px-4 text-sm"
       />
       <Input value={guests} onChange={(event) => setGuests(event.target.value)} placeholder="Guests" />
       <Button asChild size="lg" className="w-full lg:w-auto">

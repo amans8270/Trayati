@@ -56,7 +56,7 @@ export function CommentSection({
       </div>
       <div className="space-y-4">
         {comments.map((comment) => (
-          <div key={comment.id} className="rounded-3xl border border-[hsl(var(--border))] bg-white/70 p-4">
+          <div key={comment.id} className="field-base rounded-3xl p-4">
             <p className="font-medium">{comment.author}</p>
             <p className="mt-2 text-sm leading-7 text-[hsl(var(--muted-foreground))]">{comment.body}</p>
           </div>

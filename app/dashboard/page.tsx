@@ -17,7 +17,7 @@ export default function DashboardPage() {
           <h2 className="font-serif text-3xl">My Bookings</h2>
           <div className="mt-6 grid gap-4">
             {bookings.map((booking) => (
-              <div key={booking.id} className="rounded-[28px] border border-[hsl(var(--border))] bg-white/70 p-5">
+              <div key={booking.id} className="field-base rounded-[28px] p-5">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <div>
                     <p className="font-semibold">{booking.propertyName}</p>

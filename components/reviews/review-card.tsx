@@ -40,10 +40,10 @@ export function ReviewCard({ review }: { review: Review }) {
         <div className="flex items-center gap-3">
           <StarRating value={review.overallRating} />
           <div className="flex flex-wrap gap-2 text-xs text-[hsl(var(--muted-foreground))]">
-            <span className="rounded-full bg-stone-100 px-2 py-1">Cleanliness {review.cleanlinessRating}/5</span>
-            <span className="rounded-full bg-stone-100 px-2 py-1">Location {review.locationRating}/5</span>
-            <span className="rounded-full bg-stone-100 px-2 py-1">Hospitality {review.hospitalityRating}/5</span>
-            <span className="rounded-full bg-stone-100 px-2 py-1">Value {review.valueRating}/5</span>
+            <span className="pill-soft px-2 py-1">Cleanliness {review.cleanlinessRating}/5</span>
+            <span className="pill-soft px-2 py-1">Location {review.locationRating}/5</span>
+            <span className="pill-soft px-2 py-1">Hospitality {review.hospitalityRating}/5</span>
+            <span className="pill-soft px-2 py-1">Value {review.valueRating}/5</span>
           </div>
         </div>
       </div>

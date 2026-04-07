@@ -15,7 +15,7 @@ export function ExperienceCard({ experience }: { experience: Experience }) {
       <div className="space-y-4 p-6">
         <div className="flex flex-wrap gap-2">
           {experience.tags.map((tag) => (
-            <span key={tag} className="rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-[hsl(var(--muted-foreground))]">
+            <span key={tag} className="pill-soft px-3 py-1 text-xs font-medium">
               {tag}
             </span>
           ))}

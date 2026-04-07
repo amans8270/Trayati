@@ -58,7 +58,7 @@ export function ReviewForm() {
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-sm">
           Property stayed at
-          <select className="h-12 rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4" {...form.register("propertyId")}>
+          <select className="field-base h-12 rounded-2xl px-4" {...form.register("propertyId")}>
             {properties.map((property) => (
               <option key={property.id} value={property.id}>
                 {property.name}
@@ -78,7 +78,7 @@ export function ReviewForm() {
 
       <div className="grid gap-4 md:grid-cols-2">
         {Object.entries(ratings).map(([key, value]) => (
-          <div key={key} className="rounded-3xl border border-[hsl(var(--border))] bg-white/70 p-4">
+          <div key={key} className="field-base rounded-3xl p-4">
             <p className="mb-3 text-sm font-medium capitalize">{key.replace("Rating", "").replace(/([A-Z])/g, " $1")}</p>
             <StarRating value={value} onChange={(next) => setRatings((current) => ({ ...current, [key]: next }))} size="lg" />
           </div>

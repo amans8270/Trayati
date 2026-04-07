@@ -60,8 +60,8 @@ export function ReviewsPageClient() {
 
       <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_auto]">
         <form className="glass-panel grid gap-4 p-5 lg:grid-cols-5">
-          <input name="property" placeholder="Property slug" defaultValue={searchParams.get("property") ?? ""} className="h-12 rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4 text-sm" />
-          <select name="rating" defaultValue={searchParams.get("rating") ?? ""} className="h-12 rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4 text-sm">
+          <input name="property" placeholder="Property slug" defaultValue={searchParams.get("property") ?? ""} className="field-base h-12 rounded-2xl px-4 text-sm" />
+          <select name="rating" defaultValue={searchParams.get("rating") ?? ""} className="field-base h-12 rounded-2xl px-4 text-sm">
             <option value="">All ratings</option>
             {[5, 4, 3, 2, 1].map((value) => (
               <option key={value} value={value}>
@@ -69,12 +69,12 @@ export function ReviewsPageClient() {
               </option>
             ))}
           </select>
-          <select name="category" defaultValue={searchParams.get("category") ?? ""} className="h-12 rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4 text-sm">
+          <select name="category" defaultValue={searchParams.get("category") ?? ""} className="field-base h-12 rounded-2xl px-4 text-sm">
             <option value="">Review or Experience</option>
             <option value="review">Review</option>
             <option value="experience">Experience</option>
           </select>
-          <input name="q" placeholder="Search stories" defaultValue={searchParams.get("q") ?? ""} className="h-12 rounded-2xl border border-[hsl(var(--border))] bg-white/75 px-4 text-sm" />
+          <input name="q" placeholder="Search stories" defaultValue={searchParams.get("q") ?? ""} className="field-base h-12 rounded-2xl px-4 text-sm" />
           <button className="h-12 rounded-full bg-[hsl(var(--primary))] px-6 text-sm font-semibold text-[hsl(var(--primary-foreground))]">Apply</button>
         </form>
       </div>
