@@ -36,7 +36,7 @@ export default function ReviewsPage() {
           },
         }}
       />
-      <Suspense fallback={<div className="glass-panel p-8">Loading reviews…</div>}>
+      <Suspense fallback={<div className="glass-panel p-5 sm:p-8">Loading reviews…</div>}>
         <ReviewsPageClient />
       </Suspense>
     </div>

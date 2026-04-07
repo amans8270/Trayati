@@ -41,7 +41,7 @@ export function ReviewsPageClient() {
 
   return (
     <>
-      <div className="glass-panel overflow-hidden p-8">
+      <div className="glass-panel overflow-hidden p-5 sm:p-8">
         <SectionHeading
           eyebrow="Real Stays. Real Stories."
           title="Read what our guests experienced and share yours."
@@ -59,7 +59,7 @@ export function ReviewsPageClient() {
       </div>
 
       <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_auto]">
-        <form className="glass-panel grid gap-4 p-5 lg:grid-cols-5">
+        <form className="glass-panel grid gap-4 p-4 sm:p-5 lg:grid-cols-5">
           <input name="property" placeholder="Property slug" defaultValue={searchParams.get("property") ?? ""} className="field-base h-12 rounded-2xl px-4 text-sm" />
           <select name="rating" defaultValue={searchParams.get("rating") ?? ""} className="field-base h-12 rounded-2xl px-4 text-sm">
             <option value="">All ratings</option>
@@ -80,7 +80,7 @@ export function ReviewsPageClient() {
       </div>
 
       <section className="mt-12">
-        <h2 className="font-serif text-4xl">Guest Reviews</h2>
+        <h2 className="font-serif text-3xl sm:text-4xl">Guest Reviews</h2>
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           {filteredReviews.slice(0, visibleReviews).map((review) => (
             <ReviewCard key={review.id} review={review} />
@@ -96,9 +96,9 @@ export function ReviewsPageClient() {
       </section>
 
       <section className="mt-16">
-        <div className="mb-8 flex items-center justify-between">
-          <h2 className="font-serif text-4xl">Guest Experiences</h2>
-          <Button asChild variant="outline">
+        <div className="mb-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <h2 className="font-serif text-3xl sm:text-4xl">Guest Experiences</h2>
+          <Button asChild variant="outline" className="w-full sm:w-auto">
             <Link href="/reviews/experiences/new">Share Your Story</Link>
           </Button>
         </div>

@@ -25,7 +25,7 @@ export function HeroSearch() {
   }, [checkIn, checkOut, guests, location]);
 
   return (
-    <div className="glass-panel mt-10 grid gap-4 p-4 lg:grid-cols-[1.3fr_1fr_1fr_0.8fr_auto]">
+    <div className="glass-panel mt-8 grid gap-3 p-3 sm:mt-10 sm:gap-4 sm:p-4 lg:grid-cols-[1.3fr_1fr_1fr_0.8fr_auto]">
       <Input value={location} onChange={(event) => setLocation(event.target.value)} placeholder="Location" />
       <DatePicker
         selected={checkIn}

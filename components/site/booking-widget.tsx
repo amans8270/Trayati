@@ -37,11 +37,11 @@ export function BookingWidget({ property }: { property: Property }) {
   }
 
   return (
-    <div className="glass-panel sticky top-28 space-y-5 p-6">
-      <div className="flex items-center justify-between">
+    <div className="glass-panel space-y-5 p-5 sm:p-6 lg:sticky lg:top-28">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <p className="text-sm text-[hsl(var(--muted-foreground))]">From</p>
-          <p className="font-serif text-3xl">{formatCurrency(property.price)}</p>
+          <p className="font-serif text-2xl sm:text-3xl">{formatCurrency(property.price)}</p>
         </div>
         <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">Instant booking</span>
       </div>

@@ -67,10 +67,10 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
         }}
       />
       <div className="container-shell section-space">
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-6">
+        <div className="mb-8 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between sm:gap-6">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[hsl(var(--primary))]">{property.type}</p>
-            <h1 className="mt-3 font-serif text-5xl">{property.name}</h1>
+            <h1 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-5xl">{property.name}</h1>
             <p className="mt-4 inline-flex items-center gap-2 text-sm text-[hsl(var(--muted-foreground))]">
               <MapPin className="h-4 w-4" />
               {property.location}
@@ -86,9 +86,9 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
         </div>
 
         <div className="grid gap-3 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="grid gap-3 sm:grid-cols-2">
-            {property.images.slice(0, 5).map((image, index) => (
-              <div key={image} className={`relative overflow-hidden rounded-[28px] ${index === 0 ? "sm:col-span-2 h-[420px]" : "h-52"}`}>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {property.images.slice(0, 5).map((image, index) => (
+              <div key={image} className={`relative overflow-hidden rounded-[24px] ${index === 0 ? "sm:col-span-2 h-[260px] sm:h-[360px] lg:h-[420px]" : "h-44 sm:h-52"}`}>
                 <Image src={image} alt={property.name} fill className="object-cover" />
               </div>
             ))}
@@ -98,7 +98,7 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_320px]">
           <div className="space-y-12">
-            <section className="glass-panel p-8">
+            <section className="glass-panel p-5 sm:p-8">
               <h2 className="font-serif text-3xl">About this stay</h2>
               <p className="mt-4 text-base leading-8 text-[hsl(var(--muted-foreground))]">{property.description}</p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -110,8 +110,8 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
               </div>
             </section>
 
-            <section className="glass-panel p-8">
-              <div className="flex items-center justify-between">
+            <section className="glass-panel p-5 sm:p-8">
+              <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <h2 className="font-serif text-3xl">Reviews & Ratings</h2>
                   <p className="mt-2 text-sm text-[hsl(var(--muted-foreground))]">Inline review module with public access and auth-gated submissions.</p>
@@ -140,7 +140,7 @@ export default function PropertyDetailPage({ params }: { params: { slug: string 
             </section>
           </div>
 
-          <aside className="space-y-6">
+          <aside className="order-first space-y-6 lg:order-none">
             <div className="glass-panel p-6">
               <p className="font-serif text-2xl">Location & Access</p>
               <p className="mt-3 text-sm leading-7 text-[hsl(var(--muted-foreground))]">

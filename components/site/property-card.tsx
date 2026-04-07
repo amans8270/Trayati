@@ -8,7 +8,7 @@ import { type Property } from "@/lib/types";
 export function PropertyCard({ property }: { property: Property }) {
   return (
     <article className="glass-panel overflow-hidden">
-      <div className="relative h-72">
+      <div className="relative h-60 sm:h-72">
         <Image src={property.images[0]} alt={property.name} fill className="object-cover" />
         <div className="absolute inset-x-4 top-4 flex items-center justify-between">
           <span className="rounded-full bg-black/60 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white">{property.type}</span>
@@ -18,9 +18,9 @@ export function PropertyCard({ property }: { property: Property }) {
           </span>
         </div>
       </div>
-      <div className="space-y-4 p-6">
+        <div className="space-y-4 p-5 sm:p-6">
         <div>
-          <Link href={`/properties/${property.slug}`} className="font-serif text-2xl">
+          <Link href={`/properties/${property.slug}`} className="font-serif text-xl sm:text-2xl">
             {property.name}
           </Link>
           <div className="mt-2 flex flex-wrap gap-4 text-sm text-[hsl(var(--muted-foreground))]">
@@ -30,7 +30,7 @@ export function PropertyCard({ property }: { property: Property }) {
           </div>
         </div>
         <p className="text-sm leading-7 text-[hsl(var(--muted-foreground))]">{property.shortDescription}</p>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="text-sm text-[hsl(var(--muted-foreground))]">
             <span className="text-lg font-semibold text-[hsl(var(--foreground))]">
               <IndianRupee className="inline h-5 w-5" />
@@ -38,7 +38,7 @@ export function PropertyCard({ property }: { property: Property }) {
             </span>{" "}
             / night
           </div>
-          <Button asChild>
+          <Button asChild className="w-full sm:w-auto">
             <Link href={`/properties/${property.slug}`}>Book Now</Link>
           </Button>
         </div>

@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfair.variable} font-sans`}>
+      <body className={`${inter.variable} ${playfair.variable} overflow-x-hidden pb-20 font-sans sm:pb-0`}>
         <Providers>
           <div className="relative min-h-screen">
             <SiteHeader />
